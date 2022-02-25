@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.sr-only {
+    position: absolute;
+    margin: -1px;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.cardwrapper {
+    display: flex;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.imagebox-desktop, .imagebox-mobile {
+    filter: opacity(0.5) drop-shadow(0 0 0 hsl(277, 100%, 50%));
+}
+
+.copywrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    
+    
+}
+
+.stats {
+    display: flex;
+}
+
+
+.maincopy h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.1;
+   }
+
+   .maincopy span {
+       color: hsl(277, 64%, 61%);
+   }
+
+.maincopy p {
+    color: hsla(0, 0%, 100%, 0.75);
+   line-height: 1.7;
+   margin-top: 1.5rem;
+   font-weight: 400;
+}
+
+
+.stats {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.stats li :first-child
+ {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    
+}
+
+.stats  li :last-child {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.millions {
+    text-transform: uppercase;
+}
+
+/*Mobile Version */
+@media (max-width: 1339px) {
+    .imagebox-desktop {
+        display: none;
+    }
+        
+    .cardwrapper {
+        flex-direction: column;
+        width: 85vw;
+        max-width: 30rem;
+        height: fit-content;
+    }
+
+    .copywrapper {
+        align-items: center;
+        
+    }
+    
+    .maincopy {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats li {
+        margin-bottom: 1.8rem;
+    }
+  
+}
+
+
+/*Desktop Version */
+@media (min-width: 1340px) {
+    .imagebox-mobile {
+        display: none;
+    }
+    
+    .cardwrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 70vw;
+        max-width: 80rem;
+        
+    }
+
+    .copywrapper {
+        justify-content: flex-start;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: 5rem;
+        min-width: 25rem;
+        
+        
+    }
+
+    .stats {
+        justify-content: space-between;
+        margin-top: 6rem;
+    }
+
+    .maincopy {
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
